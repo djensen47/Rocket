@@ -884,6 +884,8 @@ impl<K: 'static, C: Poolable> ConnectionPool<K, C> {
             }
         }
     }
+
+    pub fn get_pool(&self) -> Pool { self.pool.clone() }
 }
 
 impl<K: 'static, C: Poolable> Connection<K, C> {
